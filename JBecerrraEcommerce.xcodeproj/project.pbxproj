@@ -10,9 +10,11 @@
 		EB407E64295CBA820089FD6B /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E63295CBA820089FD6B /* Alumno.swift */; };
 		EB407E66295CBC980089FD6B /* AlumnoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */; };
 		EB407E68295CBDAE0089FD6B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E67295CBDAE0089FD6B /* Result.swift */; };
+		EB407E6A295CF9420089FD6B /* testinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E69295CF9420089FD6B /* testinViewController.swift */; };
+		EB7A3F5D295E198400EE9DB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */; };
 		EB818B2F295BB493006E0E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B2E295BB493006E0E28 /* AppDelegate.swift */; };
 		EB818B31295BB493006E0E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B30295BB493006E0E28 /* SceneDelegate.swift */; };
-		EB818B33295BB493006E0E28 /* AlumnoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B32295BB493006E0E28 /* AlumnoForm.swift */; };
+		EB818B33295BB493006E0E28 /* AlumnoFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B32295BB493006E0E28 /* AlumnoFormController.swift */; };
 		EB818B36295BB493006E0E28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB818B34295BB493006E0E28 /* Main.storyboard */; };
 		EB818B39295BB493006E0E28 /* JBecerrraEcommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB818B37295BB493006E0E28 /* JBecerrraEcommerce.xcdatamodeld */; };
 		EB818B3B295BB495006E0E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB818B3A295BB495006E0E28 /* Assets.xcassets */; };
@@ -24,10 +26,12 @@
 		EB407E63295CBA820089FD6B /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoViewModel.swift; sourceTree = "<group>"; };
 		EB407E67295CBDAE0089FD6B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EB407E69295CF9420089FD6B /* testinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testinViewController.swift; sourceTree = "<group>"; };
+		EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EB818B2B295BB493006E0E28 /* JBecerrraEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBecerrraEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB818B2E295BB493006E0E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB818B30295BB493006E0E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB818B32295BB493006E0E28 /* AlumnoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoForm.swift; sourceTree = "<group>"; };
+		EB818B32295BB493006E0E28 /* AlumnoFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoFormController.swift; sourceTree = "<group>"; };
 		EB818B35295BB493006E0E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB818B38295BB493006E0E28 /* JBecerrraEcommerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JBecerrraEcommerce.xcdatamodel; sourceTree = "<group>"; };
 		EB818B3A295BB495006E0E28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			children = (
 				EB407E63295CBA820089FD6B /* Alumno.swift */,
 				EB407E67295CBDAE0089FD6B /* Result.swift */,
+				EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,7 +114,8 @@
 		EB818B48295BB4CA006E0E28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EB818B32295BB493006E0E28 /* AlumnoForm.swift */,
+				EB818B32295BB493006E0E28 /* AlumnoFormController.swift */,
+				EB407E69295CF9420089FD6B /* testinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB818B33295BB493006E0E28 /* AlumnoForm.swift in Sources */,
+				EB407E6A295CF9420089FD6B /* testinViewController.swift in Sources */,
+				EB818B33295BB493006E0E28 /* AlumnoFormController.swift in Sources */,
 				EB407E66295CBC980089FD6B /* AlumnoViewModel.swift in Sources */,
+				EB7A3F5D295E198400EE9DB0 /* TableViewController.swift in Sources */,
 				EB407E64295CBA820089FD6B /* Alumno.swift in Sources */,
 				EB818B2F295BB493006E0E28 /* AppDelegate.swift in Sources */,
 				EB818B31295BB493006E0E28 /* SceneDelegate.swift in Sources */,

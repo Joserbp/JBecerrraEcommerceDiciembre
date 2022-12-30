@@ -31,8 +31,6 @@ class AlumnoFormController: UIViewController {
         let idenficador = segue.identifier
         if segue.identifier == "NavegacionRojo"{
             print("Se intenta navegar a la vista roja")
-            //let seguesViewController = SeguesViewController()
-            //seguesViewController.dato = 3
         }
     }
     

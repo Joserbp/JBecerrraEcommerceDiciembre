@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U7V-aE-gFm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L4g-Hc-2sa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -14,24 +14,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AlumnoFormController" customModule="JBecerrraEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JX8-Xc-Byt">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFG-jJ-0YI">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-6d-UKr">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yst-XX-S0h">
-                                                <rect key="frame" x="146.66666666666666" y="22.666666666666671" width="100" height="100"/>
+                                                <rect key="frame" x="146.66666666666666" y="-24" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Gb4-2m-vl9"/>
                                                     <constraint firstAttribute="width" constant="100" id="nlm-LL-a6c"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is7-G9-K5N">
-                                                <rect key="frame" x="214.66666666666666" y="90.666666666666657" width="32" height="32"/>
+                                                <rect key="frame" x="214.66666666666666" y="44" width="32" height="32"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="9Ll-Cn-oQH"/>
@@ -52,7 +52,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iEC-73-rJX">
-                                                <rect key="frame" x="30" y="154.66666666666663" width="333" height="340"/>
+                                                <rect key="frame" x="30" y="108" width="333" height="340"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-5u-gLi">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="44"/>
@@ -73,7 +73,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido Paterno" translatesAutoresizingMaskIntoConstraints="NO" id="GAH-k0-Hvg">
-                                                        <rect key="frame" x="0.0" y="74.000000000000028" width="333" height="44"/>
+                                                        <rect key="frame" x="0.0" y="74" width="333" height="44"/>
                                                         <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <color key="tintColor" name="Theme"/>
                                                         <constraints>
@@ -88,7 +88,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido Materno" translatesAutoresizingMaskIntoConstraints="NO" id="lEB-W3-rCV">
-                                                        <rect key="frame" x="0.0" y="148.00000000000003" width="333" height="44"/>
+                                                        <rect key="frame" x="0.0" y="148" width="333" height="44"/>
                                                         <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <color key="tintColor" name="Theme"/>
                                                         <constraints>
@@ -103,7 +103,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genero" translatesAutoresizingMaskIntoConstraints="NO" id="QcC-oR-8UM">
-                                                        <rect key="frame" x="0.0" y="222.00000000000003" width="333" height="43.999999999999972"/>
+                                                        <rect key="frame" x="0.0" y="222" width="333" height="44"/>
                                                         <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                                         <color key="tintColor" name="Theme"/>
                                                         <constraints>
@@ -141,7 +141,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqt-d3-CH9">
-                                                <rect key="frame" x="30" y="514.66666666666663" width="333" height="48"/>
+                                                <rect key="frame" x="30" y="468" width="333" height="48"/>
                                                 <color key="backgroundColor" name="Theme"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="7yO-aR-v0y"/>
@@ -160,7 +160,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRH-ZV-eZ3">
-                                                <rect key="frame" x="30" y="581" width="333" height="48"/>
+                                                <rect key="frame" x="30" y="534.33333333333337" width="333" height="48"/>
                                                 <color key="backgroundColor" name="Theme"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="etj-ZB-F3Z"/>
@@ -229,12 +229,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="-413"/>
+            <point key="canvasLocation" x="1656" y="-413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S6c-L7-a6V">
+            <objects>
+                <navigationController id="L4g-Hc-2sa" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sTc-rP-Lr2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U7V-aE-gFm" kind="relationship" relationship="rootViewController" id="19a-aB-l9M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7K-h8-Esm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-413"/>
         </scene>
         <!--Get All Table View Controller-->
         <scene sceneID="HeM-8d-4Vh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tx0-gt-sZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="U7V-aE-gFm" customClass="GetAllTableViewController" customModule="JBecerrraEcommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fAJ-cS-eF6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -245,10 +262,26 @@
                             <outlet property="delegate" destination="U7V-aE-gFm" id="W1s-LP-b9V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KRE-Vn-bFZ"/>
+                    <navigationItem key="navigationItem" id="KRE-Vn-bFZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sFb-OT-C3T">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZbU-BU-CMM">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="+">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QJ6-iJ-3XO"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tx0-gt-sZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239" y="-423"/>
+            <point key="canvasLocation" x="715" y="-413"/>
         </scene>
     </scenes>
     <resources>
@@ -260,11 +293,17 @@
         <namedColor name="Theme">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

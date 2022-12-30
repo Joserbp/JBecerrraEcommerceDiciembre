@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class AlumnoTableViewCell: UITableViewCell {
+class AlumnoTableViewCell: SwipeTableViewCell {
 
     
     @IBOutlet weak var Nombrelbl: UILabel!
     
+    @IBOutlet weak var ApellidoPaternoField: UILabel!
+    
+    @IBOutlet weak var ApellidoMaternoField: UILabel!
+    
+    @IBOutlet weak var ImageUser: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

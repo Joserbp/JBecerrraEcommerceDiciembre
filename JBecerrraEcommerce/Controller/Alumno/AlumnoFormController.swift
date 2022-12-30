@@ -23,16 +23,16 @@ class AlumnoFormController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func SeguesRojoButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "NavegacionRojo", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let idenficador = segue.identifier
-        if segue.identifier == "NavegacionRojo"{
-            print("Se intenta navegar a la vista roja")
-        }
-    }
+//    @IBAction func SeguesRojoButton(_ sender: UIButton) {
+//        performSegue(withIdentifier: "NavegacionRojo", sender: self)
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //let idenficador = segue.identifier
+//        if segue.identifier == "NavegacionRojo"{
+//            print("Se intenta navegar a la vista roja")
+//        }
+//    }
     
     @IBAction func AddButton(_ sender: UIButton) {
         //IMPLEMENTAR VALIDACION GUARD LET // IF LET

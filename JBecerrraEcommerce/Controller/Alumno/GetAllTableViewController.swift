@@ -6,19 +6,35 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class GetAllTableViewController: UITableViewController {
+class GetAllTableViewController: UITableViewController{
 
     let alumnoViewModel = AlumnoViewModel()
     var alumnos = [Alumno]()
     
     override func viewDidLoad() {
+        navigationController?.isNavigationBarHidden = false
         super.viewDidLoad()
+
+        print("ViewDidLoad")
         tableView.register(UINib(nibName: "AlumnoTableViewCell", bundle: nil), forCellReuseIdentifier: "AlumnoCell")
         loadData()
-        
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        print("ViewWillAppear")
+        loadData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("ViewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("ViewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print("ViewDidDisappear")
+    }
+    
     func loadData() {
         let result = alumnoViewModel.GetAll()
         if result.Correct{
@@ -43,8 +59,11 @@ class GetAllTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlumnoCell", for: indexPath) as! AlumnoTableViewCell
+        cell.delegate = self
         cell.Nombrelbl.text = alumnos[indexPath.row].Nombre
-
+        cell.ApellidoPaternoField.text = alumnos[indexPath.row].ApellidoPaterno
+        cell.ApellidoMaternoField.text = alumnos[indexPath.row].ApellidoMaterno
+        cell.ImageUser.image = UIImage(named: "User")
         return cell
     }
 
@@ -93,4 +112,21 @@ class GetAllTableViewController: UITableViewController {
     }
     */
 
+}
+extension GetAllTableViewController : SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeCellKit.SwipeActionsOrientation) -> [SwipeCellKit.SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            print(indexPath.row)
+            
+        }
+
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete")
+
+        return [deleteAction]
+    }
+    
+    
 }

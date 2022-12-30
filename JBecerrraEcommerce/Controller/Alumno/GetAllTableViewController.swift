@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  GetAllTableViewController.swift
 //  JBecerrraEcommerce
 //
 //  Created by MacbookMBA7 on 29/12/22.
@@ -7,39 +7,46 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class GetAllTableViewController: UITableViewController {
 
+    let alumnoViewModel = AlumnoViewModel()
+    var alumnos = [Alumno]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "AlumnoTableViewCell", bundle: nil), forCellReuseIdentifier: "AlumnoCell")
+        loadData()
+        
     }
 
+    func loadData() {
+        let result = alumnoViewModel.GetAll()
+        if result.Correct{
+            alumnos = result.Objects! as! [Alumno]
+            tableView.reloadData()
+        }
+        else{
+            //ALERT
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return alumnos.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AlumnoCell", for: indexPath) as! AlumnoTableViewCell
+        cell.Nombrelbl.text = alumnos[indexPath.row].Nombre
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

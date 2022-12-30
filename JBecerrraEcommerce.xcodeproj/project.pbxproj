@@ -10,8 +10,9 @@
 		EB407E64295CBA820089FD6B /* Alumno.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E63295CBA820089FD6B /* Alumno.swift */; };
 		EB407E66295CBC980089FD6B /* AlumnoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */; };
 		EB407E68295CBDAE0089FD6B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E67295CBDAE0089FD6B /* Result.swift */; };
-		EB407E6A295CF9420089FD6B /* testinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB407E69295CF9420089FD6B /* testinViewController.swift */; };
-		EB7A3F5D295E198400EE9DB0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */; };
+		EB7A3F65295E5BD900EE9DB0 /* GetAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A3F64295E5BD900EE9DB0 /* GetAllTableViewController.swift */; };
+		EB7A3F68295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A3F66295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift */; };
+		EB7A3F69295E5F8B00EE9DB0 /* AlumnoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7A3F67295E5F8B00EE9DB0 /* AlumnoTableViewCell.xib */; };
 		EB818B2F295BB493006E0E28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B2E295BB493006E0E28 /* AppDelegate.swift */; };
 		EB818B31295BB493006E0E28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B30295BB493006E0E28 /* SceneDelegate.swift */; };
 		EB818B33295BB493006E0E28 /* AlumnoFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B32295BB493006E0E28 /* AlumnoFormController.swift */; };
@@ -26,8 +27,9 @@
 		EB407E63295CBA820089FD6B /* Alumno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumno.swift; sourceTree = "<group>"; };
 		EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoViewModel.swift; sourceTree = "<group>"; };
 		EB407E67295CBDAE0089FD6B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		EB407E69295CF9420089FD6B /* testinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testinViewController.swift; sourceTree = "<group>"; };
-		EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		EB7A3F64295E5BD900EE9DB0 /* GetAllTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllTableViewController.swift; sourceTree = "<group>"; };
+		EB7A3F66295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnoTableViewCell.swift; sourceTree = "<group>"; };
+		EB7A3F67295E5F8B00EE9DB0 /* AlumnoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlumnoTableViewCell.xib; sourceTree = "<group>"; };
 		EB818B2B295BB493006E0E28 /* JBecerrraEcommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBecerrraEcommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB818B2E295BB493006E0E28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB818B30295BB493006E0E28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB7A3F5E295E365B00EE9DB0 /* Alumno */ = {
+			isa = PBXGroup;
+			children = (
+				EB7A3F66295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift */,
+				EB818B32295BB493006E0E28 /* AlumnoFormController.swift */,
+				EB7A3F64295E5BD900EE9DB0 /* GetAllTableViewController.swift */,
+			);
+			path = Alumno;
+			sourceTree = "<group>";
+		};
+		EB7A3F63295E5B6C00EE9DB0 /* Alumno */ = {
+			isa = PBXGroup;
+			children = (
+				EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */,
+			);
+			path = Alumno;
+			sourceTree = "<group>";
+		};
 		EB818B22295BB493006E0E28 = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +108,6 @@
 			children = (
 				EB407E63295CBA820089FD6B /* Alumno.swift */,
 				EB407E67295CBDAE0089FD6B /* Result.swift */,
-				EB7A3F5C295E198400EE9DB0 /* TableViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,8 +115,8 @@
 		EB818B46295BB4B1006E0E28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EB7A3F63295E5B6C00EE9DB0 /* Alumno */,
 				EB818B49295BB705006E0E28 /* DB.swift */,
-				EB407E65295CBC980089FD6B /* AlumnoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,6 +126,7 @@
 			children = (
 				EB818B34295BB493006E0E28 /* Main.storyboard */,
 				EB818B3C295BB495006E0E28 /* LaunchScreen.storyboard */,
+				EB7A3F67295E5F8B00EE9DB0 /* AlumnoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,8 +134,7 @@
 		EB818B48295BB4CA006E0E28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EB818B32295BB493006E0E28 /* AlumnoFormController.swift */,
-				EB407E69295CF9420089FD6B /* testinViewController.swift */,
+				EB7A3F5E295E365B00EE9DB0 /* Alumno */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 				EB818B3E295BB495006E0E28 /* LaunchScreen.storyboard in Resources */,
 				EB818B3B295BB495006E0E28 /* Assets.xcassets in Resources */,
 				EB818B36295BB493006E0E28 /* Main.storyboard in Resources */,
+				EB7A3F69295E5F8B00EE9DB0 /* AlumnoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,11 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB407E6A295CF9420089FD6B /* testinViewController.swift in Sources */,
 				EB818B33295BB493006E0E28 /* AlumnoFormController.swift in Sources */,
 				EB407E66295CBC980089FD6B /* AlumnoViewModel.swift in Sources */,
-				EB7A3F5D295E198400EE9DB0 /* TableViewController.swift in Sources */,
 				EB407E64295CBA820089FD6B /* Alumno.swift in Sources */,
+				EB7A3F68295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift in Sources */,
+				EB7A3F65295E5BD900EE9DB0 /* GetAllTableViewController.swift in Sources */,
 				EB818B2F295BB493006E0E28 /* AppDelegate.swift in Sources */,
 				EB818B31295BB493006E0E28 /* SceneDelegate.swift in Sources */,
 				EB818B4A295BB705006E0E28 /* DB.swift in Sources */,

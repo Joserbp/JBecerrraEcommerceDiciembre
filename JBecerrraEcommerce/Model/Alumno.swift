@@ -14,7 +14,7 @@ struct Alumno {
     var ApellidoMaterno : String
     var Genero : String
     //Propiedades de navegación
-    var result : Result?
+    //var result : Result?
     init(IdAlumno: Int, Nombre: String, ApellidoPaterno: String, ApellidoMaterno: String, Genero: String) {
         self.IdAlumno = IdAlumno
         self.Nombre = Nombre
@@ -28,6 +28,6 @@ struct Alumno {
         self.ApellidoPaterno = ""
         self.ApellidoMaterno = ""
         self.Genero = ""
-        self.result = nil
+    //  self.result = nil
     }
 }

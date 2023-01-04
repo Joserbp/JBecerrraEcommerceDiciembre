@@ -12,6 +12,7 @@ class GetAllTableViewController: UITableViewController{
 
     let alumnoViewModel = AlumnoViewModel()
     var alumnos = [Alumno]()
+    var idAlumno : Int = 0
     
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = false
@@ -63,7 +64,12 @@ class GetAllTableViewController: UITableViewController{
         cell.Nombrelbl.text = alumnos[indexPath.row].Nombre
         cell.ApellidoPaternoField.text = alumnos[indexPath.row].ApellidoPaterno
         cell.ApellidoMaternoField.text = alumnos[indexPath.row].ApellidoMaterno
-        cell.ImageUser.image = UIImage(named: "User")
+        if alumnos[indexPath.row].Imagen == ""{
+            cell.ImageUser.image = UIImage(named: "User")
+        }else{
+            let imageData = Data(base64Encoded: alumnos[indexPath.row].Imagen, options: Data.Base64DecodingOptions.ignoreUnknownCharacters)
+            cell.ImageUser.image = UIImage(data: imageData!)
+        }
         return cell
     }
 
@@ -118,15 +124,26 @@ extension GetAllTableViewController : SwipeTableViewCellDelegate{
         guard orientation == .right else { return nil }
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            print(indexPath.row)
-            
+           
+            let idAlumno = self.alumnos[indexPath.row].IdAlumno
+            print("La Celda es el indice: \(indexPath.row) y el IdAlumno es: \(idAlumno)")
+            let result = self.alumnoViewModel.Delete(IdAlumno: idAlumno)
+            if result.Correct{
+                //UIAlert
+            }else{
+                //UIAlert
+            }
+            self.loadData()
         }
 
-        // customize the action appearance
         deleteAction.image = UIImage(named: "delete")
 
         return [deleteAction]
     }
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UpdateSegues"{
+            let alumnoForm = segue.destination as! AlumnoFormController
+            alumnoForm.idAlumno = self.idAlumno
+        }
+    }
 }

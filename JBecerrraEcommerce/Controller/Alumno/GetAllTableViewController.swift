@@ -22,6 +22,15 @@ class GetAllTableViewController: UITableViewController{
         tableView.register(UINib(nibName: "AlumnoTableViewCell", bundle: nil), forCellReuseIdentifier: "AlumnoCell")
         loadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UpdateSegues"{
+            let alumnoForm = segue.destination as! AlumnoFormController
+            alumnoForm.idAlumno = self.idAlumno
+        }
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         print("ViewWillAppear")
         loadData()
@@ -139,11 +148,13 @@ extension GetAllTableViewController : SwipeTableViewCellDelegate{
         deleteAction.image = UIImage(named: "delete")
 
         return [deleteAction]
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "UpdateSegues"{
-            let alumnoForm = segue.destination as! AlumnoFormController
-            alumnoForm.idAlumno = self.idAlumno
+        
+        if true{
+            
+        }else{
+            self.performSegue(withIdentifier: "UpdateSegues", sender: self)
         }
+        
     }
+
 }

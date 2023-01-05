@@ -10,8 +10,6 @@ import SQLite3
 
 class AlumnoViewModel {
     
-    let alumnoModel : Alumno? = nil
-    
     func Add(alumno : Alumno) -> Result{
         
         var result = Result()

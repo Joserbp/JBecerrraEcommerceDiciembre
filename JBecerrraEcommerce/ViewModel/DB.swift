@@ -25,7 +25,6 @@ class DB{
             print("Conexion Correcta")
             print(filePath)
             return db
-
         }else{
             print("Error")
             return nil

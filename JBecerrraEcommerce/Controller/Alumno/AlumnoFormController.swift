@@ -34,13 +34,21 @@ class AlumnoFormController: UIViewController,UIImagePickerControllerDelegate,UIN
     func validar(){
         if idAlumno == nil{
             //Mostrar buton que indique Agregar
+                //let button : UIButton
+                //button.setTitle("Agregar", for: .normal)
             //Mostar el formulario vacio
             imageView.image = UIImage(named: "User")
         }else
         {
             // Mostar buton que inque Actualizar
             //Mostar el formulario precargado
-            //Uso del GetById
+            let result = alumnoViewModel.GetAll()
+            if result.Correct{
+                let alumno = result.Object as! Alumno
+            }else
+            {
+                //Mensaje
+            }
             //CONVERTIR DE BASE64 a UIIMAGE
         }
     }

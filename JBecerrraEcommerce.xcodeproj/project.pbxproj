@@ -22,6 +22,9 @@
 		EB818B3B295BB495006E0E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB818B3A295BB495006E0E28 /* Assets.xcassets */; };
 		EB818B3E295BB495006E0E28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB818B3C295BB495006E0E28 /* LaunchScreen.storyboard */; };
 		EB818B4A295BB705006E0E28 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB818B49295BB705006E0E28 /* DB.swift */; };
+		EBCDA38D2967715E0075CD7B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDA38C2967715E0075CD7B /* Usuario.swift */; };
+		EBCDA390296780B20075CD7B /* UsuarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDA38F296780B20075CD7B /* UsuarioViewModel.swift */; };
+		EBCDA3932967831D0075CD7B /* UsuarioFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDA3922967831D0075CD7B /* UsuarioFormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		EB818B3D295BB495006E0E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB818B3F295BB495006E0E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB818B49295BB705006E0E28 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		EBCDA38C2967715E0075CD7B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		EBCDA38F296780B20075CD7B /* UsuarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioViewModel.swift; sourceTree = "<group>"; };
+		EBCDA3922967831D0075CD7B /* UsuarioFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioFormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,6 @@
 				8FCB26F694D14BE7A090148A /* Pods-JBecerrraEcommerce.debug.xcconfig */,
 				213BBFFD82B40412CA90542E /* Pods-JBecerrraEcommerce.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -133,6 +138,7 @@
 			children = (
 				EB407E63295CBA820089FD6B /* Alumno.swift */,
 				EB407E67295CBDAE0089FD6B /* Result.swift */,
+				EBCDA38C2967715E0075CD7B /* Usuario.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 		EB818B46295BB4B1006E0E28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBCDA38E2967809F0075CD7B /* Usuario */,
 				EB7A3F63295E5B6C00EE9DB0 /* Alumno */,
 				EB818B49295BB705006E0E28 /* DB.swift */,
 			);
@@ -159,9 +166,26 @@
 		EB818B48295BB4CA006E0E28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EBCDA391296782FA0075CD7B /* Usuario */,
 				EB7A3F5E295E365B00EE9DB0 /* Alumno */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBCDA38E2967809F0075CD7B /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EBCDA38F296780B20075CD7B /* UsuarioViewModel.swift */,
+			);
+			path = Usuario;
+			sourceTree = "<group>";
+		};
+		EBCDA391296782FA0075CD7B /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				EBCDA3922967831D0075CD7B /* UsuarioFormController.swift */,
+			);
+			path = Usuario;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +309,14 @@
 				EB407E64295CBA820089FD6B /* Alumno.swift in Sources */,
 				EB7A3F68295E5F8B00EE9DB0 /* AlumnoTableViewCell.swift in Sources */,
 				EB7A3F65295E5BD900EE9DB0 /* GetAllTableViewController.swift in Sources */,
+				EBCDA3932967831D0075CD7B /* UsuarioFormController.swift in Sources */,
 				EB818B2F295BB493006E0E28 /* AppDelegate.swift in Sources */,
 				EB818B31295BB493006E0E28 /* SceneDelegate.swift in Sources */,
+				EBCDA38D2967715E0075CD7B /* Usuario.swift in Sources */,
 				EB818B4A295BB705006E0E28 /* DB.swift in Sources */,
 				EB407E68295CBDAE0089FD6B /* Result.swift in Sources */,
 				EB818B39295BB493006E0E28 /* JBecerrraEcommerce.xcdatamodeld in Sources */,
+				EBCDA390296780B20075CD7B /* UsuarioViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -120,11 +120,11 @@
 		EB818B2D295BB493006E0E28 /* JBecerrraEcommerce */ = {
 			isa = PBXGroup;
 			children = (
+				EB818B2E295BB493006E0E28 /* AppDelegate.swift */,
 				EB818B45295BB4A6006E0E28 /* Model */,
 				EB818B47295BB4C1006E0E28 /* View */,
 				EB818B46295BB4B1006E0E28 /* ViewModel */,
 				EB818B48295BB4CA006E0E28 /* Controller */,
-				EB818B2E295BB493006E0E28 /* AppDelegate.swift */,
 				EB818B30295BB493006E0E28 /* SceneDelegate.swift */,
 				EB818B3A295BB495006E0E28 /* Assets.xcassets */,
 				EB818B3F295BB495006E0E28 /* Info.plist */,

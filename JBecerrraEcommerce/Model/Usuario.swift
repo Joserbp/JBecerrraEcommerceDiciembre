@@ -8,7 +8,7 @@
 import Foundation
 
 struct Usuario{
-    var IdUsuario : Int
+    //var IdUsuario : Int
     var Nombre : String
     var ApellidoPaterno: String
     var ApellidoMaterno: String

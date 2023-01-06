@@ -18,7 +18,9 @@ class UsuarioFormController: UIViewController {
         usuario.ApellidoPaterno = "Becerra"
         usuario.ApellidoMaterno = "Perez"
         
-        usuarioViewModel.Add(usuario: usuario)
+        usuarioViewModel.GetAll()
+        
+        //usuarioViewModel.Add(usuario: usuario)
         
 
         // Do any additional setup after loading the view.

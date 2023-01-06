@@ -35,4 +35,27 @@ class UsuarioViewModel{
         }
         return result
     }
+    
+    func GetAll() -> Result {
+        var result = Result()
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Usuario")
+        do {
+            let usuarios = try context.fetch(request)
+            result.Objects = [Usuario]()
+            for objUsuario in usuarios as! [NSManagedObject] {
+                var usuario = Usuario()
+                //usuario.IdUsuario =  objUsuario.objectID.uriRepresentation().absoluteString
+                usuario.Nombre = objUsuario.value(forKey: "nombre") as! String
+                usuario.ApellidoPaterno = objUsuario.value(forKey: "apellidoPaterno") as! String
+                
+                result.Objects?.append(usuario)
+            }
+        } catch let error {
+            result.Correct = false
+            result.Ex = error
+            result.ErrorMessage = error.localizedDescription
+        }
+        return result
+    }
 }

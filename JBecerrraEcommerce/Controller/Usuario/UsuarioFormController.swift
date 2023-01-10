@@ -6,24 +6,22 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class UsuarioFormController: UIViewController {
 
-    let usuarioViewModel = UsuarioViewModel()
+    @IBOutlet weak var SemestreDropDown: DropDown!
+    
+    let semestreViewModel = SemestreViewModel()
+    var idSemestre : Int? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        SemestreDropDown.optionArray = [String]()
+        SemestreDropDown.optionIds = [Int]()
+        LoadData()
 
-        var usuario = Usuario()
-        usuario.Nombre = "Jose"
-        usuario.ApellidoPaterno = "Becerra"
-        usuario.ApellidoMaterno = "Perez"
         
-        usuarioViewModel.GetAll()
-        
-        //usuarioViewModel.Add(usuario: usuario)
-        
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -37,4 +35,13 @@ class UsuarioFormController: UIViewController {
     }
     */
 
+    func LoadData(){
+        let result = semestreViewModel.GetAll()
+        if result.Correct{
+            for semestre in result.Objects as! [Semestre]{
+                SemestreDropDown.optionArray.append(semestre.Nombre)
+                SemestreDropDown.optionIds?.append(semestre.IdSemestre)
+            }
+        }
+    }
 }

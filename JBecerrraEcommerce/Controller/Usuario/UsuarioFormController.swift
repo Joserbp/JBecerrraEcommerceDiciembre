@@ -17,10 +17,12 @@ class UsuarioFormController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        SemestreDropDown.optionArray = [String]()
-        SemestreDropDown.optionIds = [Int]()
-        LoadData()
-
+        SemestreDropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
+        SemestreDropDown.optionIds = [1,23,54]
+        
+        SemestreDropDown.didSelect { selectedText, index, id in
+            self.idSemestre = id
+        }
         
     }
     

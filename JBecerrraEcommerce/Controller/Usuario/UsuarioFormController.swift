@@ -9,40 +9,58 @@ import UIKit
 import iOSDropDown
 
 class UsuarioFormController: UIViewController {
-
-    @IBOutlet weak var SemestreDropDown: DropDown!
     
-    let semestreViewModel = SemestreViewModel()
-    var idSemestre : Int? = nil
-
+    @IBOutlet weak var GrupoDropDown: DropDown!
+    @IBOutlet weak var PlantelDropDown: DropDown!
+    
+    let plantelViewModel = PlantelViewModel()
+    let grupoViewModel = GrupoViewModel()
+    var IdGrupo: Int? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SemestreDropDown.optionArray = ["Option 1", "Option 2", "Option 3"]
-        SemestreDropDown.optionIds = [1,23,54]
-        
-        SemestreDropDown.didSelect { selectedText, index, id in
-            self.idSemestre = id
+        PlantelDropDown.optionArray = [String]()
+        PlantelDropDown.optionIds = [Int]()
+        GrupoDropDown.optionArray = [String]()
+        GrupoDropDown.optionIds = [Int]()
+        LoadData()
+        PlantelDropDown.didSelect { selectedText, index, id in
+            self.LoadDataGrupos(id)
+        }
+        GrupoDropDown.didSelect { selectedText, index, id in
+            self.IdGrupo = id
         }
         
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     func LoadData(){
-        let result = semestreViewModel.GetAll()
+        let result = plantelViewModel.GetAll()
         if result.Correct{
-            for semestre in result.Objects as! [Semestre]{
-                SemestreDropDown.optionArray.append(semestre.Nombre)
-                SemestreDropDown.optionIds?.append(semestre.IdSemestre)
+            for plantel in result.Objects as! [Plantel]{
+                PlantelDropDown.optionArray.append(plantel.Nombre)
+                PlantelDropDown.optionIds?.append(plantel.IdPlantel)
+            }
+        }
+    }
+    func LoadDataGrupos(_ IdPlantel : Int){
+        let result = grupoViewModel.GetByIdPlantel(IdPlantel)
+        if result.Correct{
+            GrupoDropDown.optionArray = [String]()
+            GrupoDropDown.optionIds = [Int]()
+            for grupo in result.Objects as! [Grupo]{
+                GrupoDropDown.optionArray.append(grupo.Nombre)
+                GrupoDropDown.optionIds?.append(grupo.IdGrupo)
             }
         }
     }

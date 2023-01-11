@@ -14,8 +14,7 @@ struct Alumno {
     var ApellidoMaterno : String
     var Genero : String
     var Imagen : String
-    //Propiedades de navegación
-    //var result : Result?
+    
     init(IdAlumno: Int, Nombre: String, ApellidoPaterno: String, ApellidoMaterno: String, Genero: String,Imagen : String) {
         self.IdAlumno = IdAlumno
         self.Nombre = Nombre

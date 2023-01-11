@@ -17,7 +17,7 @@ class GetAllTableViewController: UITableViewController{
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = false
         super.viewDidLoad()
-
+        
         print("ViewDidLoad")
         tableView.register(UINib(nibName: "AlumnoTableViewCell", bundle: nil), forCellReuseIdentifier: "AlumnoCell")
         loadData()

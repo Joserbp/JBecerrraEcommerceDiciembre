@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct Semestre {
-    var IdSemestre : Int
+struct Grupo {
+    var IdGrupo : Int
     var Nombre : String
+    var plantel : Plantel?
     
-    init(IdSemestre: Int, Nombre: String) {
-        self.IdSemestre = IdSemestre
+    init(IdGrupo: Int, Nombre: String) {
+        self.IdGrupo = IdGrupo
         self.Nombre = Nombre
     }
     
     init(){
-        self.IdSemestre = 0
+        self.IdGrupo = 0
         self.Nombre = ""
     }
 }

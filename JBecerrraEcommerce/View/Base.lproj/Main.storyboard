@@ -281,7 +281,6 @@
         <!--Navigation Controller-->
         <scene sceneID="q4R-eM-xg1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H95-2h-ZrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="938-Z8-UBS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1DD-9v-Sb8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0h2-gU-4Ce">
@@ -292,6 +291,7 @@
                         <segue destination="nLX-3q-gEW" kind="relationship" relationship="rootViewController" id="EpP-Qe-0Xy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H95-2h-ZrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3505" y="-99"/>
         </scene>
@@ -346,7 +346,7 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-Wa-ryZ" customClass="JRDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccion un Area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-Wa-ryZ" customClass="JRDropDown">
                                 <rect key="frame" x="96.666666666666686" y="205" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ups-a4-0rp"/>
@@ -365,14 +365,24 @@
                                     <segment title="Other"/>
                                 </segments>
                             </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona un Grupo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-1B-s41" customClass="JRDropDown">
+                                <rect key="frame" x="96.666666666666686" y="254" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="J6o-MH-HJG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PSR-rC-M4c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fR8-Wa-ryZ" firstAttribute="centerY" secondItem="v3E-Vo-exK" secondAttribute="centerY" constant="-204" id="1pg-Vr-TRv"/>
                             <constraint firstItem="0LX-Bu-DZE" firstAttribute="top" secondItem="D0F-ec-YeU" secondAttribute="bottom" constant="56" id="8nU-D2-qQZ"/>
+                            <constraint firstItem="Xkf-1B-s41" firstAttribute="centerX" secondItem="fR8-Wa-ryZ" secondAttribute="centerX" id="Hwh-MG-twD"/>
                             <constraint firstItem="PSR-rC-M4c" firstAttribute="trailing" secondItem="0LX-Bu-DZE" secondAttribute="trailing" id="Ncl-s8-AQ4"/>
                             <constraint firstItem="D0F-ec-YeU" firstAttribute="top" secondItem="v3E-Vo-exK" secondAttribute="top" constant="322" id="OO3-4m-v2G"/>
+                            <constraint firstItem="Xkf-1B-s41" firstAttribute="top" secondItem="fR8-Wa-ryZ" secondAttribute="bottom" constant="15" id="c36-jU-ID5"/>
                             <constraint firstItem="fR8-Wa-ryZ" firstAttribute="centerX" secondItem="v3E-Vo-exK" secondAttribute="centerX" id="dAi-4Z-yOw"/>
                             <constraint firstItem="0LX-Bu-DZE" firstAttribute="centerX" secondItem="v3E-Vo-exK" secondAttribute="centerX" id="lFM-XC-zj8"/>
                             <constraint firstItem="PSR-rC-M4c" firstAttribute="trailing" secondItem="D0F-ec-YeU" secondAttribute="trailing" constant="55" id="mFU-Ik-rex"/>
@@ -382,7 +392,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="SemestreDropDown" destination="fR8-Wa-ryZ" id="AEl-De-AoW"/>
+                        <outlet property="GrupoDropDown" destination="Xkf-1B-s41" id="DDw-hL-z9H"/>
+                        <outlet property="PlantelDropDown" destination="fR8-Wa-ryZ" id="AEl-De-AoW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFq-Ha-UVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
